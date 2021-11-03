@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+/* CSS VARIABLES */
+:root {
+  /* ## Primary */
+  --Scissors-Gradient: linear-gradient(
+    to bottom,
+    hsl(39, 89%, 49%),
+    hsl(40, 84%, 53%)
+  );
+  --Paper-Gradient: linear-gradient(
+    to bottom,
+    hsl(230, 89%, 62%),
+    hsl(230, 89%, 65%)
+  );
+  --Rock-Gradient: linear-gradient(
+    to bottom,
+    hsl(349, 71%, 52%),
+    hsl(349, 70%, 56%)
+  );
+  --Lizard-Gradient: linear-gradient(
+    circle at 100%,
+    hsl(261, 73%, 60%) to hsl(261, 72%, 63%)
+  );
+  --Cyan: linear-gradient(
+    circle at 100%,
+    hsl(189, 59%, 53%) to hsl(189, 58%, 57%)
+  );
+
+  /* ### Neutral */
+  --Dark-Text: hsl(229, 25%, 31%);
+  --Score-Text: hsl(229, 64%, 46%);
+  --Header-Outline: hsl(217, 16%, 45%);
+
+  /* ### Background */
+  --Radial-Gradient: radial-gradient(
+    circle at 50% 10%,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+
+  /* ## Fonts */
+  --Family: "Barlow Semi Condensed", sans-serif;
+}
+
+/*CSS FORMATTING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--Family);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100%;
+  background: var(--Radial-Gradient);
+}
+
+header {
+  border: 3px solid var(--Header-Outline);
+  border-radius: 10px;
+  margin-top: 30px;
+  padding: 10px 10px 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+  max-width: 85vw;
+}
+
+header h1 {
+  display: inline-flex;
+  flex-direction: column;
+  color: #fff;
+  font-size: 16px;
+}
+
+.score-wrapper {
+  background-color: #fff;
+  border-radius: 5px;
+  color: var(--Score-Text);
+  font-size: 8px;
+  padding: 8px 15px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.score-wrapper p {
+  font-size: 35px;
+  margin-top: 5px;
+  color: var(--Dark-Text);
+}
+
+.rules {
+  position: absolute;
+  bottom: 10%;
+  background-color: transparent;
+  border: 2px solid var(--Header-Outline);
+  border-radius: 5px;
+  color: #fff;
+  letter-spacing: 2px;
+  padding: 10px 30px;
+}
+
+.game-container::before {
+  position: absolute;
+  content: "";
+  top: 20%;
+  left: 20%;
+  width: 200px;
+  height: 200px;
+  z-index: -1;
+  background: url(./images/bg-triangle.svg) no-repeat center;
+  background-size: cover;
+}
+
+.game-container {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.game-wrapper {
+  border: 10px solid var(--Scissors-Gradient);
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.game-wrapper.paper {
+  background: var(--Paper-Gradient);
+}
+
+.game-wrapper.scissors {
+  background: var(--Scissors-Gradient);
+}
+
+.game-wrapper.rock {
+  background: var(--Rock-Gradient);
+}
+
+.img {
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 3%;
+  color: #fff;
+}
+
+
+/* MEDIUM SCREEN i.e iphone X, 6, 7 & 8 including the plus  */
+@media screen and (min-width: 375px){
+  /* .game-container{
+    margin-top: 80px;
+  }
+  .img {
+    width: 120px;
+    height: 120px;
+  } */
+}
+
+@media screen and (min-height: 800px){
+  /* .game-container{
+    margin-top: 120px;
+  } */
+}
+
+@media screen and (min-width: 520px) {
+  .game-container{
+    width: 70%
+  }
+
+}
+
+/* TABLET SCREEN SIZE */
+@media screen and (min-width: 768px){
+  /* .game-container::before {
+    left: 30%;
+    width: 300px;
+    height: 300px;
+  }
+  .game-wrapper {
+    margin: 0 50px;
+  }
+  .img {
+    width: 200px;
+    height: 200px;
+  }
+  img{
+    transform: scale(1.7);
+  }
+  .attribution{
+    font-size: 14px;
+  } */
+}

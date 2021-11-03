@@ -1,37 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <meta name="description" content="Web game, rock paper scissor, frontend solution">
-  <meta name="keywords" content="Web game, rock paper scissor, frontend solution">
-  <meta name="author" content="Elozino Ovedhe">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <meta
+      name="description"
+      content="Web game, rock paper scissor, frontend solution"
+    />
+    <meta
+      name="keywords"
+      content="Web game, rock paper scissor, frontend solution"
+    />
+    <meta name="author" content="Elozino Ovedhe" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock, Paper, Scissors</title>
 
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Score
-  Rules
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>
+          <span>ROCK</span>
+          <span>PAPER</span>
+          <span>SCISSORS</span>
+        </h1>
+        <div class="score-wrapper">
+          <h4>SCORE</h4>
+          <p class="score">0</p>
+        </div>
+      </header>
+    </div>
+    <!-- Score Rules You Picked The House Picked You Win You Lose Play Again -->
 
-  You Picked
-  The House Picked
+    <!--GAME-->
+    <div class="middle">
+      <div class="game-container">
+        <div class="game-wrapper paper" data-choice="paper">
+          <button class="btn-circle">
+            <img src="./images/icon-paper.svg" alt="icon-paper" />
+          </button>
+        </div>
+        <div class="game-wrapper scissors" data-choice="scissors">
+          <button class="btn-circle">
+            <img src="./images/icon-scissors.svg" alt="icon-scissors" />
+          </button>
+        </div>
+        <div class="game-wrapper rock" data-choice="rock">
+          <button class="btn-circle">
+            <img src="./images/icon-rock.svg" alt="icon-rock" />
+          </button>
+        </div>
+      </div>
+    </div>
 
-  You Win
-  You Lose
+    <button class="rules">RULES</button>
+    
+    <div class="modal-wrapper">
+      <div class="rule-modal">
+        <div class="modal-header">
+          <h3>RULES</h3>
+          <img class="close" s data-choice=""rc="./images/icon-close.svg" alt="icon-close">
+        </div>
+        <div class="image-rules">
+          <img src="./images/image-rules.svg" alt="image-rules">
+        </div>
+      </div>
+    </div>
 
-  Play Again
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-  <script src="app.js"></script>
-</body>
+    <!--To display what the player picked and what the computer picked-->
+    <div class="container-choice">
+      <div>
+        <p>YOU PICKED</p>
+        <div class="choice-wrapper">
+          <button class="btn-circle">
+            <img src="./images/icon-rock.svg" alt="icon-rock" />
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <h2>YOU <span>WIN</span></h2>
+        <button>PLAY AGAIN</button>
+      </div>
+
+      <div>
+        <p>THE HOUSE PICKED</p>
+        <div class="choice-wrapper">
+          <button class="btn-circle">
+            <img src="./images/icon-rock.svg" alt="icon-rock" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Elozino</a>.
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
