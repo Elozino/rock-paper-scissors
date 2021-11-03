@@ -12,7 +12,7 @@
       name="keywords"
       content="Web game, rock paper scissor, frontend solution"
     />
-    <meta name="author" content="Elozino Ovedhe" />
+    <meta name="author" content="Elozino" />
     <link
       rel="icon"
       type="image/png"
@@ -28,7 +28,7 @@
         text-align: center;
       }
       .attribution a {
-        color: hsl(228, 45%, 44%);
+        color: hsl(100, 20%, 80%);
       }
     </style>
   </head>
@@ -70,25 +70,24 @@
     </div>
 
     <button class="rules">RULES</button>
-    
+
     <div class="modal-wrapper">
       <div class="rule-modal">
         <div class="modal-header">
           <h3>RULES</h3>
-          <img class="close" s data-choice=""rc="./images/icon-close.svg" alt="icon-close">
+          <img class="close" title="click to close" src="./images/icon-close.svg" alt="icon-close" />
         </div>
         <div class="image-rules">
-          <img src="./images/image-rules.svg" alt="image-rules">
+          <img src="./images/image-rules.svg" alt="image-rules" />
         </div>
       </div>
     </div>
 
-
     <!--To display what the player picked and what the computer picked-->
-    <div class="container-choice">
+    <div class="container-choice hide">
       <div>
         <p>YOU PICKED</p>
-        <div class="choice-wrapper">
+        <div class="choice-wrapper choice-rock" id="user-select">
           <button class="btn-circle">
             <img src="./images/icon-rock.svg" alt="icon-rock" />
           </button>
@@ -96,13 +95,13 @@
       </div>
 
       <div>
-        <h2>YOU <span>WIN</span></h2>
-        <button>PLAY AGAIN</button>
+        <h2>YOU <span class="game-result">WIN</span></h2>
+        <button class="play-again">PLAY AGAIN</button>
       </div>
 
       <div>
         <p>THE HOUSE PICKED</p>
-        <div class="choice-wrapper">
+        <div class="choice-wrapper" id="computer-select">
           <button class="btn-circle">
             <img src="./images/icon-rock.svg" alt="icon-rock" />
           </button>
